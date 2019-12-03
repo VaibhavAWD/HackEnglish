@@ -63,7 +63,7 @@ dependencies {
     // ************ Architecture Component Dependencies *******************//
     // Lifecycle - ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version" //(java 8)
 
     // Navigation

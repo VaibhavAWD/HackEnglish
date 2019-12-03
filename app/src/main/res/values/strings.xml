@@ -10,5 +10,12 @@
     <string name="btn_register">Register</string>
     <string name="btn_register_here">Don\'t have account? Register Here</string>
     <string name="btn_login_here">Already have account? Login Here</string>
+    <string name="msg_welcome">Welcome!</string>
+    <!--  Auth Input Error Messages  -->
+    <string name="error_empty_name">Please enter Name</string>
+    <string name="error_empty_email">Please enter Email Id</string>
+    <string name="error_invalid_email">Invalid Email Id</string>
+    <string name="error_empty_password">Please enter Password</string>
+    <string name="error_invalid_password">Password min 6 and max 16 char.</string>
 
 </resources>
