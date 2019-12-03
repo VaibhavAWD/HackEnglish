@@ -10,4 +10,8 @@ class DefaultHackEnglishRepository(
     override suspend fun registerUser(name: String, email: String, password: String): Result<User> {
         return remoteDataSource.registerUser(name, email, password)
     }
+
+    override suspend fun loginUser(email: String, password: String): Result<User> {
+        return remoteDataSource.loginUser(email, password)
+    }
 }

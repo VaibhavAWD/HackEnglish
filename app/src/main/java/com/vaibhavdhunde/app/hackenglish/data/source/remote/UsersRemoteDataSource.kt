@@ -29,4 +29,19 @@ class UsersRemoteDataSource(
         }
     }
 
+    override suspend fun loginUser(email: String, password: String): Result<User> {
+        return try {
+            val response = SafeApiRequest.apiRequest { api.loginUser(email, password) }
+            if (response.error) {
+                Error(response.message!!)
+            } else {
+                Success(response.user!!)
+            }
+        } catch (e: NetworkException) {
+            Error(e.message!!)
+        } catch (e: ApiException) {
+            Error(e.message!!)
+        }
+    }
+
 }

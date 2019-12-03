@@ -19,6 +19,13 @@ interface HackEnglishApi {
         @Field("password") password: String
     ): Response<AuthResponse>
 
+    @FormUrlEncoded
+    @POST("login")
+    suspend fun loginUser(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Response<AuthResponse>
+
     companion object {
         operator fun invoke(interceptor: NetworkInterceptor): HackEnglishApi {
             val apiClient = OkHttpClient.Builder()
